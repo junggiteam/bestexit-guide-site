@@ -311,3 +311,34 @@ a.pill:hover { color: var(--red); border-color: var(--red); }
 }
 .ft-info b, .ft-info span { white-space: nowrap; }
 @media (min-width: 641px) { .ft-addr { white-space: nowrap; } }
+
+/* ── 2026-11-25 대표님 요청 수정 ── */
+/* 머리글: 로고 빼고 'FAQ 가이드'를 왼쪽 끝에, 오른쪽에 빨간 '베스트엑싯 →' 단추(올리면 화살표가 움직임) */
+.logo-sub { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; }
+.hd-btn { height: 42px; padding: 0 18px; display: inline-flex; align-items: center; gap: 8px; border-radius: 21px; background: var(--red); color: #fff; font-size: 15px; font-weight: 700; white-space: nowrap; transition: background-color var(--ease); }
+.hd-btn:hover { color: #fff; background: #c90c0c; }
+.hd-arr { display: inline-block; transition: transform 180ms ease; }
+.hd-btn:hover .hd-arr, .hd-btn:focus-visible .hd-arr { transform: translateX(4px); }
+.hd-right { gap: 8px; }
+@media (max-width: 899px) {
+  .logo-sub { font-size: 18px; }
+  .hd-btn { height: 38px; padding: 0 14px; font-size: 15px; }
+}
+@media (prefers-reduced-motion: reduce) { .hd-arr { transition: none; } }
+
+/* 고정 분야 메뉴 띠: 아래쪽으로 옅은 그림자 */
+.menubar { box-shadow: 0 6px 14px -8px rgba(17,17,17,.18); }
+
+/* 펼침 목록 줄: 글자 조금 작게, 위아래 간격 좁게, + 조금 작게 */
+.acc summary { padding: 15px 4px; gap: 16px; }
+.acc-t { font-size: 17px; line-height: 1.5; }
+.acc-i { width: 16px; height: 16px; }
+.acc-i::before, .acc-i::after { width: 12px; height: 1.8px; }
+@media (max-width: 640px) {
+  .acc summary { padding: 14px 2px; }
+  .acc-t { font-size: 16px; }
+}
+
+/* 바닥글: 틀 폭이 아니라 베스트엑싯 본 사이트 바닥글과 같은 폭(최대 1200px, 좌우 40px / 휴대폰 15px) */
+.ft .wrap { max-width: 1200px; padding-left: 40px; padding-right: 40px; }
+@media (max-width: 640px) { .ft .wrap { padding-left: 15px; padding-right: 15px; } }
