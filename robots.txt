@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://guide.bestexit.co.kr/sitemap.xml
